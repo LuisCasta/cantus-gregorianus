@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/gregobase/:path*",
+      "destination": "https://gregobase.selapa.net/:path*"
+    }
+  ]
+}

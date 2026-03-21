@@ -1,0 +1,276 @@
+[
+  {
+    "id": 1,
+    "titulo": "Santo Rosario",
+    "tipo": "Oración Mariana",
+    "descripcion": "El Santo Rosario es la devoción mariana por excelencia de la Iglesia Católica, consagrada por siglos de uso y recomendada por innumerables Pontífices. Meditando los misterios de la vida de Nuestro Señor Jesucristo, el fiel implora la intercesión de la Santísima Virgen.",
+    "duracion": "20-30 min",
+    "icono": "rosario",
+    "dias": "Diariamente; especialmente en octubre (mes del Rosario)",
+    "texto_introductorio": "Se comienza con el Credo, el Padrenuestro, tres Avemarías (por la fe, esperanza y caridad) y el Gloriapatri. Luego se alternan un Padrenuestro, diez Avemarías y un Gloriapatri por cada misterio.",
+    "misterios": [
+      {
+        "nombre": "Misterios Gozosos",
+        "dias": "Lunes y Jueves",
+        "lista": [
+          "I. La Anunciación del Ángel Gabriel a María Santísima",
+          "II. La Visitación de Nuestra Señora a su prima Santa Isabel",
+          "III. El Nacimiento del Niño Jesús en Belén",
+          "IV. La Presentación del Niño Jesús en el Templo y la Purificación de María",
+          "V. El Niño Jesús perdido y hallado en el Templo"
+        ]
+      },
+      {
+        "nombre": "Misterios Dolorosos",
+        "dias": "Martes y Viernes",
+        "lista": [
+          "I. La Oración de Jesús en el Huerto de los Olivos",
+          "II. La Flagelación de Nuestro Señor atado a la columna",
+          "III. La Coronación de Espinas",
+          "IV. Jesús cargando la Cruz camino al Calvario",
+          "V. La Crucifixión y Muerte de Nuestro Señor Jesucristo"
+        ]
+      },
+      {
+        "nombre": "Misterios Gloriosos",
+        "dias": "Miércoles, Sábado y Domingo",
+        "lista": [
+          "I. La Resurrección de Nuestro Señor Jesucristo",
+          "II. La Ascensión de Jesús a los Cielos",
+          "III. La Venida del Espíritu Santo sobre los Apóstoles en Pentecostés",
+          "IV. La Asunción de Nuestra Señora en cuerpo y alma a los Cielos",
+          "V. La Coronación de Nuestra Señora como Reina del Cielo y de la Tierra"
+        ]
+      }
+    ],
+    "jaculatoria": "Oh Jesús mío, perdónanos, líbranos del fuego del infierno, lleva al cielo a todas las almas, especialmente a las más necesitadas de tu misericordia.",
+    "popular": true,
+    "tags": ["rosario", "maría", "meditación", "misterios", "rosario tradicional"]
+  },
+  {
+    "id": 2,
+    "titulo": "Via Crucis (Vía Dolorosa)",
+    "tipo": "Devoción Penitencial",
+    "descripcion": "El Vía Crucis o Ejercicio del Vía Sacro es una de las devociones más antiguas y extendidas de la Iglesia. Comenzando en la condena de Pilato y terminando en el Santo Sepulcro, el fiel recorre espiritualmente el camino que Jesús hizo hacia el Calvario.",
+    "duracion": "30-45 min",
+    "icono": "cruz",
+    "dias": "Todos los viernes del año; especialmente durante la Cuaresma y Semana Santa",
+    "texto_introductorio": "Se comienza de rodillas ante el crucifijo. Ante cada estación se reza: V. Te adoramos, oh Cristo, y te bendecimos. R. Porque por tu santa Cruz redimiste al mundo.",
+    "estaciones": [
+      "I. Jesús es condenado a muerte por Poncio Pilato",
+      "II. Jesús recibe la Cruz en sus hombros",
+      "III. Jesús cae por primera vez bajo el peso de la Cruz",
+      "IV. Jesús encuentra a su Santísima Madre",
+      "V. El Cirineo es obligado a ayudar a Jesús a llevar la Cruz",
+      "VI. La Verónica enjuga el rostro de Jesús",
+      "VII. Jesús cae por segunda vez",
+      "VIII. Jesús consuela a las piadosas mujeres de Jerusalén",
+      "IX. Jesús cae por tercera vez",
+      "X. Jesús es despojado de sus vestiduras",
+      "XI. Jesús es clavado en la Cruz",
+      "XII. Jesús muere en la Cruz",
+      "XIII. El cuerpo de Jesús es bajado de la Cruz y entregado a su Santísima Madre",
+      "XIV. El Sagrado Cuerpo de Jesús es depositado en el Sepulcro"
+    ],
+    "popular": true,
+    "tags": ["cuaresma", "semana santa", "pasión", "penitencia", "viernes"]
+  },
+  {
+    "id": 3,
+    "titulo": "Adoración al Santísimo Sacramento",
+    "tipo": "Adoración Eucarística",
+    "descripcion": "La Adoración del Santísimo Sacramento expuesto en la Custodia o en el Copón es una de las prácticas más eminentes de la piedad católica. El fiel adora en silencio y oración a Jesucristo verdadero, real y substancialmente presente bajo las especies eucarísticas.",
+    "duracion": "Variable (habitualmente una hora o más)",
+    "icono": "custodia",
+    "dias": "Según el horario parroquial; primer jueves o viernes del mes con mayor solemnidad",
+    "texto_introductorio": "Al llegar ante el Santísimo, se hace genuflexión en ambas rodillas. Se recomienda comenzar con el Acto de Fe Eucarística y el canto del O Salutaris Hostia.",
+    "oraciones": [
+      "Acto de Fe: Creo, Jesús mío, que estás realmente presente en el Santísimo Sacramento del Altar...",
+      "Acto de Adoración: Te adoro, oh mi Dios, presente en la Sagrada Eucaristía...",
+      "Alma de Cristo (San Ignacio de Loyola): Alma de Cristo, santifícame. Cuerpo de Cristo, sálvame. Sangre de Cristo, embriágame...",
+      "Oración de San Tomás ante el Santísimo: Ante tan admirable Sacramento...",
+      "Letanías del Sagrado Corazón de Jesús"
+    ],
+    "jaculatorias": [
+      "¡Alabado sea el Santísimo Sacramento del Altar!",
+      "¡Bendito y alabado sea el Santísimo Sacramento!",
+      "Para siempre sea alabado el Santísimo Sacramento."
+    ],
+    "popular": true,
+    "tags": ["eucaristía", "adoración", "santísimo", "contemplación", "custodia"]
+  },
+  {
+    "id": 4,
+    "titulo": "Ángelus Domini",
+    "tipo": "Oración Litúrgica",
+    "descripcion": "El Ángelus es una antiquísima oración que conmemora el Misterio de la Encarnación. Se reza tres veces al día al toque de campanas. En tiempo pascual se reza en su lugar el Regina Cæli.",
+    "duracion": "5 min",
+    "icono": "campana",
+    "dias": "Tres veces al día: amanecer, mediodía y anochecer (6h, 12h, 18h)",
+    "texto": "V. Angelus Domini nuntiavit Mariæ.\nR. Et concepit de Spiritu Sancto.\nAve Maria...\n\nV. Ecce ancilla Domini.\nR. Fiat mihi secundum verbum tuum.\nAve Maria...\n\nV. Et Verbum caro factum est.\nR. Et habitavit in nobis.\nAve Maria...\n\nV. Ora pro nobis, sancta Dei Genitrix.\nR. Ut digni efficiamur promissionibus Christi.\n\nOremus:\nGratiam tuam, quæsumus, Domine, mentibus nostris infunde; ut qui, angelo nuntiante, Christi Filii tui Incarnationem cognovimus, per passionem eius et crucem ad resurrectionis gloriam perducamur. Per eundem Christum Dominum nostrum. Amen.",
+    "popular": true,
+    "tags": ["angelus", "maría", "encarnación", "mediodía", "campanas"]
+  },
+  {
+    "id": 5,
+    "titulo": "Regina Cæli (Tiempo Pascual)",
+    "tipo": "Oración Mariana",
+    "descripcion": "En el Tiempo Pascual (de Pascua a Pentecostés), el Regina Cæli sustituye al Ángelus. Se reza tres veces al día al toque de campanas. Según la tradición, fue revelada por ángeles a San Gregorio Magno.",
+    "duracion": "5 min",
+    "icono": "campana",
+    "dias": "Desde el Sábado Santo hasta Pentecostés (inclusive), tres veces al día",
+    "texto": "Regina cæli, lætare, alleluja:\nQua quem meruisti portare, alleluja,\nResurrexit sicut dixit, alleluja:\nOra pro nobis Deum, alleluja.\n\nV. Gaude et lætare, Virgo Maria, alleluja.\nR. Quia surrexit Dominus vere, alleluja.\n\nOremus:\nDeus, qui per resurrectionem Filii tui Domini nostri Jesu Christi mundum lætificare dignatus es: præsta, quæsumus, ut per eius Genetricem Virginem Mariam perpetuæ capiamus gaudia vitæ. Per eundem Christum Dominum nostrum. Amen.",
+    "popular": true,
+    "tags": ["pascua", "maría", "aleluya", "angelus pascual", "resurrección"]
+  },
+  {
+    "id": 6,
+    "titulo": "Letanías Lauretanas",
+    "tipo": "Letanía Mariana",
+    "descripcion": "Las Letanías de Loreto son las letanías marianas aprobadas por la Iglesia para uso litúrgico público. Se cantaban especialmente al finalizar el Santo Rosario y en las procesiones marianas. En ellas se invocan los títulos de la Virgen María confirmados por la Tradición.",
+    "duracion": "10-15 min",
+    "icono": "maria",
+    "dias": "En las devociones marianas, especialmente en mayo y octubre",
+    "texto": "Kyrie eleison. Christe eleison. Kyrie eleison.\nChriste, audi nos. Christe, exaudi nos.\nPater de cælis, Deus, miserere nobis.\nFili, Redemptor mundi, Deus, miserere nobis.\nSpiritus Sancte, Deus, miserere nobis.\nSancta Trinitas, unus Deus, miserere nobis.\n\nSancta Maria, ora pro nobis.\nSancta Dei Genitrix, ora pro nobis.\nSancta Virgo virginum, ora pro nobis.\nMater Christi, ora pro nobis.\nMater Ecclesiæ, ora pro nobis.\nMater divinæ gratiæ, ora pro nobis.\nMater purissima, ora pro nobis.\nMater castissima, ora pro nobis.\nMater inviolata, ora pro nobis.\nMater intemerata, ora pro nobis.\nMater amabilis, ora pro nobis.\nMater admirabilis, ora pro nobis.\nMater boni consilii, ora pro nobis.\nMater Creatoris, ora pro nobis.\nMater Salvatoris, ora pro nobis.\nVirgo prudentissima, ora pro nobis.\nVirgo veneranda, ora pro nobis.\nVirgo prædicanda, ora pro nobis.\nVirgo potens, ora pro nobis.\nVirgo clemens, ora pro nobis.\nVirgo fidelis, ora pro nobis.\nSpeculum iustitiæ, ora pro nobis.\nSedes sapientiæ, ora pro nobis.\nCausa nostræ lætitiæ, ora pro nobis.\nVas spirituale, ora pro nobis.\nVas honorabile, ora pro nobis.\nVas insigne devotionis, ora pro nobis.\nRosa mystica, ora pro nobis.\nTurris Davidica, ora pro nobis.\nTurris eburnea, ora pro nobis.\nDomus aurea, ora pro nobis.\nFœderis arca, ora pro nobis.\nIanua cæli, ora pro nobis.\nStella matutina, ora pro nobis.\nSalus infirmorum, ora pro nobis.\nRefugium peccatorum, ora pro nobis.\nAuxilium Christianorum, ora pro nobis.\nRegina Angelorum, ora pro nobis.\nRegina Patriarcharum, ora pro nobis.\nRegina Prophetarum, ora pro nobis.\nRegina Apostolorum, ora pro nobis.\nRegina Martyrum, ora pro nobis.\nRegina Confessorum, ora pro nobis.\nRegina Virginum, ora pro nobis.\nRegina Sanctorum omnium, ora pro nobis.\nRegina sine labe originali concepta, ora pro nobis.\nRegina in cælum Assumpta, ora pro nobis.\nRegina sacratissimi Rosarii, ora pro nobis.\nRegina familiæ, ora pro nobis.\nRegina pacis, ora pro nobis.\n\nAgnus Dei, qui tollis peccata mundi, parce nobis, Domine.\nAgnus Dei, qui tollis peccata mundi, exaudi nos, Domine.\nAgnus Dei, qui tollis peccata mundi, miserere nobis.",
+    "popular": true,
+    "tags": ["letanías", "loreto", "maría", "rosario", "procesión"]
+  },
+  {
+    "id": 7,
+    "titulo": "Liturgia de las Horas (Breviario Romano)",
+    "tipo": "Oración Litúrgica",
+    "descripcion": "La Liturgia de las Horas, también llamada Oficio Divino o Breviario Romano, es la oración oficial de la Iglesia que santifica las horas del día con salmos, himnos e lecturas. Es la oración de toda la Iglesia, más allá del clero y religiosos.",
+    "duracion": "Variable según el oficio",
+    "icono": "libro",
+    "dias": "Diariamente, distribuyendo los oficios a lo largo del día",
+    "horas": [
+      "Maitines u Oficio de Lecturas: Nocturnos con salmos e lecturas patrísticas",
+      "Laudes: Oración matutina al amanecer, con el himno del tiempo",
+      "Prima: Primera hora, hacia las 6h",
+      "Tercia: Hora de la mañana, hacia las 9h",
+      "Sexta: Hora del mediodía, hacia las 12h",
+      "Nona: Hora de la tarde temprana, hacia las 15h",
+      "Vísperas: Oración vespertina, con el cántico del Magnificat",
+      "Completas: Cierre del día, con el examen de conciencia y la antífona mariana"
+    ],
+    "popular": false,
+    "tags": ["breviario", "horas", "salmos", "oficio divino", "liturgia"]
+  },
+  {
+    "id": 8,
+    "titulo": "Novena a San José",
+    "tipo": "Novena",
+    "descripcion": "Novena en honor al Glorioso Patriarca San José, Esposo de la Santísima Virgen María, Padre adoptivo de Nuestro Señor Jesucristo, Patrono de la Iglesia Universal y protector de los moribundos. Se reza especialmente en el mes de marzo.",
+    "duracion": "9 días",
+    "icono": "novena",
+    "dias": "Del 10 al 18 de marzo (Fiesta: 19 de marzo); o cualquier tiempo de necesidad",
+    "oracion_principal": "Oh bienaventurado San José, a ti acudimos en nuestra tribulación, y después de implorar el auxilio de tu Santísima Esposa, solicitamos también confiadamente tu patrocinio. Por el amor que te unió con la Inmaculada Virgen María, Madre de Dios, y por el paternal cariño con que abrazaste al Niño Jesús, te suplicamos humildemente que dirijas una mirada benigna a la preciosa herencia que Jesucristo adquirió con su Sangre, y nos auxilíes en nuestras necesidades con tu poder e intercesión.\n\nDefiende, oh providentísimo custodio de la Sagrada Familia, a los elegidos del Jesucristo; aparta de nosotros toda contagión de error y de corrupción; propicio socórrenos desde el Cielo en esta lucha contra el poder de las tinieblas; y así como en otro tiempo libraste al Niño Jesús del grave peligro de su vida, así ahora defiende a la santa Iglesia de Dios de los lazos de sus enemigos y de toda adversidad. Ámparanos con tu continua protección para que a imitación tuya y apoyados en tu auxilio, podamos vivir santamente, morir piadosamente y alcanzar la eterna bienaventuranza en el Cielo. Amén.",
+    "popular": true,
+    "tags": ["san josé", "novena", "marzo", "familia", "trabajo", "moribundos"]
+  },
+  {
+    "id": 9,
+    "titulo": "Examen de Conciencia (Método Ignaciano)",
+    "tipo": "Meditación Espiritual",
+    "descripcion": "El Examen de Conciencia propuesto por San Ignacio de Loyola en sus Ejercicios Espirituales. Es una práctica de discernimiento que permite al fiel reconocer la acción de Dios en su vida, detectar sus faltas y proponerse enmienda.",
+    "duracion": "15-20 min",
+    "icono": "corazon",
+    "dias": "Al final del día, cada noche; también antes de la Confesión",
+    "pasos": [
+      "1. Acción de gracias: Agradecer a Dios los beneficios recibidos durante el día.",
+      "2. Petición de luz: Pedir al Espíritu Santo gracia para conocer los propios pecados y de ellos me arrepienta.",
+      "3. Examen particular: Pasar revista a los propios pensamientos, palabras, obras y omisiones del día, confrontándolos con los Mandamientos y los deberes del propio estado.",
+      "4. Contrición: Dolerse de los pecados cometidos, especialmente por ofender a Dios, bien supremo.",
+      "5. Propósito de enmienda: Hacer propósito firme de confesarlos y de evitar las ocasiones de pecar. Terminar con un Padrenuestro."
+    ],
+    "popular": false,
+    "tags": ["ignacio", "examen", "conciencia", "discernimiento", "ejercicios espirituales"]
+  },
+  {
+    "id": 10,
+    "titulo": "Novena a la Inmaculada Concepción",
+    "tipo": "Novena",
+    "descripcion": "Novena en honor a la Inmaculada Concepción de la Bienaventurada Virgen María, dogma definido por el Papa Pío IX el 8 de diciembre de 1854. Se reza del 29 de noviembre al 7 de diciembre para preparar la fiesta del 8 de diciembre.",
+    "duracion": "9 días",
+    "icono": "novena",
+    "dias": "Del 29 de noviembre al 7 de diciembre (Fiesta: 8 de diciembre)",
+    "oracion_principal": "Oh María, concebida sin pecado original, ruega por nosotros que recurrimos a Vos.",
+    "popular": true,
+    "tags": ["inmaculada", "maría", "diciembre", "novena", "concepción"]
+  },
+  {
+    "id": 11,
+    "titulo": "Trisagio Angélico",
+    "tipo": "Oración Litúrgica",
+    "descripcion": "El Trisagio — «Santo, Santo, Santo» — es la aclamación de los serafines ante el trono de Dios (Is 6,3) que la Iglesia ha incorporado a su oración. El Trisagio trinitario expande esta aclamación en oración a la Santísima Trinidad.",
+    "duracion": "10 min",
+    "icono": "angel",
+    "dias": "Domingos y fiestas de la Santísima Trinidad; como preparación a la Misa",
+    "texto": "Santo Dios, Santo Fuerte, Santo Inmortal,\nlíbranos, Señor.\n(×3)\n\nGloria al Padre, que nos creó.\nGloria al Hijo, que nos redimió.\nGloria al Espíritu Santo, que nos santificó.\n\nSanta Trinidad, un solo Dios,\nten piedad de nosotros.",
+    "popular": false,
+    "tags": ["trinidad", "trisagio", "serafines", "adoración", "santo"]
+  },
+  {
+    "id": 12,
+    "titulo": "Novena de la Inmaculada — Medalla Milagrosa",
+    "tipo": "Novena",
+    "descripcion": "Novena de la Medalla Milagrosa, basada en las apariciones de la Santísima Virgen a Santa Catalina Labouré en 1830. La Virgen pidió la acuñación de la medalla con la jaculatoria: «Oh María, concebida sin pecado, ruega por nosotros que recurrimos a Vos».",
+    "duracion": "9 días",
+    "icono": "novena",
+    "dias": "Del 19 al 27 de noviembre (Fiesta: 27 de noviembre)",
+    "oracion_principal": "Oh Virgen Inmaculada, llena de gracia, que has venido del Cielo a darnos la Medalla Milagrosa como signo de tu amor maternal y de tu poder para salvar; alcánzanos de tu divino Hijo la conversión de todos los pecadores del mundo entero y muy especialmente la de los que nos son más queridos. Amén.",
+    "popular": false,
+    "tags": ["medalla milagrosa", "catalina labouré", "maría", "novena", "inmaculada"]
+  },
+  {
+    "id": 13,
+    "titulo": "Letanías de Todos los Santos",
+    "tipo": "Letanía",
+    "descripcion": "Las Letanías de los Santos son la letanía más solemne de la liturgia romana, cantadas en las Rogativas, la Vigilia Pascual, las ordenaciones, la consagración de iglesias y otros ritos solemnes. Invoca a la Santísima Trinidad, a la Virgen María y a todos los Santos.",
+    "duracion": "15-20 min",
+    "icono": "angel",
+    "dias": "Rogativas (25 de abril y los tres días antes de la Ascensión); Vigilia Pascual; ordenaciones",
+    "texto": "Kyrie eleison. Christe eleison. Kyrie eleison.\nChriste, audi nos. Christe, exaudi nos.\n\nPater de cælis, Deus, miserere nobis.\nFili Redemptor mundi, Deus, miserere nobis.\nSpiritus Sancte, Deus, miserere nobis.\nSancta Trinitas, unus Deus, miserere nobis.\n\nSancta Maria, ora pro nobis.\nSancta Dei Genitrix, ora pro nobis.\nSancta Virgo virginum, ora pro nobis.\nSancte Michael, ora pro nobis.\nSancte Gabriel, ora pro nobis.\nSancte Raphael, ora pro nobis.\nOmnes sancti Angeli et Archangeli, orate pro nobis.\nSancte Ioannes Baptista, ora pro nobis.\nSancte Ioseph, ora pro nobis.\nOmnes sancti Patriarchæ et Prophetæ, orate pro nobis.\nSancte Petre, ora pro nobis.\nSancte Paule, ora pro nobis.\nSancte Andrea, ora pro nobis.\nSancte Ioannes, ora pro nobis.\n[...] Omnes sancti Apostoli et Evangelistæ, orate pro nobis.",
+    "popular": false,
+    "tags": ["letanías", "santos", "rogativas", "vigilia pascual", "ordenaciones"]
+  },
+  {
+    "id": 14,
+    "titulo": "Ejercicio de la Buena Muerte",
+    "tipo": "Meditación Espiritual",
+    "descripcion": "El Ejercicio de la Buena Muerte, promovido por San Roberto Belarmino y practicado especialmente los primeros viernes del mes, prepara al alma para recibir bien la muerte y comparecer ante el juicio de Dios. La meditación contempla la propia muerte y los Novísimos.",
+    "duracion": "20-30 min",
+    "icono": "corazon",
+    "dias": "Primer viernes del mes; en preparación a la Pasión del Señor",
+    "pasos": [
+      "1. Ponerse en la presencia de Dios y pedir luz.",
+      "2. Meditación: imaginar el momento de la propia muerte, la presencia del sacerdote, los Sacramentos recibidos.",
+      "3. Examinar si en ese momento estaría en paz con Dios y con el prójimo.",
+      "4. Contemplar los Cuatro Novísimos: Muerte, Juicio, Infierno y Gloria.",
+      "5. Acto de Contrición y propósito firme de enmienda.",
+      "6. Oración al Sagrado Corazón y a la Virgen María para alcanzar la gracia de una buena muerte."
+    ],
+    "popular": false,
+    "tags": ["buena muerte", "novísimos", "belarmino", "primer viernes", "meditación"]
+  },
+  {
+    "id": 15,
+    "titulo": "Hora Santa",
+    "tipo": "Adoración Eucarística",
+    "descripcion": "La Hora Santa ante el Santísimo Sacramento recuerda la agonía de Jesús en el Huerto de Getsemaní y responde a su petición: «¿No habéis podido velar una hora conmigo?» (Mt 26,40). Es especialmente recomendada para el primer jueves del mes.",
+    "duracion": "60 min",
+    "icono": "custodia",
+    "dias": "Primer jueves del mes; todos los jueves; Jueves Santo",
+    "estructura": [
+      "Exposición del Santísimo Sacramento y canto del O Salutaris Hostia",
+      "Lectura del relato de Getsemaní (Mc 14, 32-42)",
+      "Meditación en silencio sobre la agonía de Jesús",
+      "Acto de reparación al Sagrado Corazón",
+      "Letanías del Sagrado Corazón de Jesús",
+      "Bendición con el Santísimo y canto del Tantum Ergo",
+      "Salve Regina como conclusión"
+    ],
+    "popular": true,
+    "tags": ["hora santa", "getsemaní", "sagrado corazón", "eucaristía", "primer jueves"]
+  }
+]
