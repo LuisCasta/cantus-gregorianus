@@ -112,6 +112,23 @@ export default function CantoModal({ canto, onClose }) {
     >
       <div className="modal-card">
         <button className="modal-close" onClick={onClose} aria-label="Cerrar">&times;</button>
+        <button
+          className="modal-share"
+          aria-label="Compartir"
+          onClick={() => {
+            const url = window.location.href;
+            if (navigator.share) {
+              navigator.share({ title: canto.titulo, url });
+            } else {
+              navigator.clipboard?.writeText(url);
+              const wa = `https://wa.me/?text=${encodeURIComponent(canto.titulo + '\n' + url)}`;
+              window.open(wa, '_blank');
+            }
+          }}
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="16" height="16"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+          Compartir
+        </button>
 
         <div className="modal-header">
           <div className="modal-header-badges">

@@ -6,7 +6,7 @@ export default function Hero() {
         <p className="hero-eyebrow">Ritus Romanus Traditionalis</p>
         <h1 className="hero-title">Cantus Gregorianus<br /><em>et Devotiones</em></h1>
         <p className="hero-desc">
-          Cantos gregorianos, himnos latinos y devociones de la tradición católica anterior al Concilio Vaticano II.
+          Cantos sacros, cantos gregorianos y devociones de la tradición litúrgica romana.
           Ordenados por tiempos litúrgicos para el servicio de la oración y la liturgia.
         </p>
         <div className="hero-actions">
@@ -14,7 +14,7 @@ export default function Hero() {
           <a href="#devociones" className="btn btn-outline">Devociones</a>
         </div>
         <div className="hero-badges">
-          {['Latín','Canto Gregoriano','Partituras','Pre-1964'].map(b => (
+          {['Latín','Canto Gregoriano','Partituras','Rito Romano'].map(b => (
             <span key={b} className="hero-badge">{b}</span>
           ))}
         </div>

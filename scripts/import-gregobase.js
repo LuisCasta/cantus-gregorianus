@@ -157,6 +157,31 @@ function extractTable(sql, tableName) {
   return rows;
 }
 
+// ─── Tag → tiempo litúrgico ────────────────────────────────────────────────
+// Ordered by priority (more specific first)
+const TAG_TIEMPO_RULES = [
+  { pattern: /hebdomada\s+sancta|feria\s+vi\s+in\s+passion|sabbato\s+sancto|in\s+passione\s+domini|feria\s+v\s+infra\s+hebdomadam\s+sanct/i, tiempo: 'Semana Santa' },
+  { pattern: /adventus|tempus\s+adventus|tempore\s+adventus|dominica\s+[ivi1-4]+\s+adventus|missa.*adventus|ad\s+completorium\s+in\s+adventum/i, tiempo: 'Adviento' },
+  { pattern: /nativitat|christmas|epiphan|die\s+2[45]\s+decembris|octava\s+nativitatis|sollemnitas.*nativitate|vigilia\s+epiphan|noel/i, tiempo: 'Navidad' },
+  { pattern: /quadragesim|lent\b|tempore\s+quadragesim|tempore\s+passion|vigilia.*quad|dominica.*quadrages|sunday\s+lent|passion.*domini/i, tiempo: 'Cuaresma y Semana Santa' },
+  { pattern: /paschal|paschali|paschale|paschæ|easter|resurrect|vigilia\s+pasch|dominica\s+pasch|ad\s+missam\s+vigiliae/i, tiempo: 'Pascua' },
+  { pattern: /ascension/i, tiempo: 'Pascua' },
+  { pattern: /pentecost|spiritu\s+sancto|sanctisimae\s+trinitatis|trinity/i, tiempo: 'Pentecostés' },
+  { pattern: /corpus\s+christi|ss\.\s+sacrament|honorem\s+ss\.\s+sacram|\bcorpus\b/i, tiempo: 'Santísimo Sacramento' },
+  { pattern: /mariae?\s+virginis|beatae?\s+mariae?|b\.\s*[mv]\.\s*maria|genetricis\s+mariae|conceptione\s+immacul|nativitate\s+b\.?\s*mari|honorem\s+b\.?\s+mariae?/i, tiempo: 'Virgen María' },
+  { pattern: /sancti\s+ioseph|s\.\s+familiae/i, tiempo: 'San José' },
+  { pattern: /omnium\s+sanctorum|commune\s+sanctorum|nativitate\s+sancti|sanctorum\s+petri|festiv.*sanctorum/i, tiempo: 'Santos' },
+  { pattern: /defunctorum|pro\s+defunct|de\s+vigilia\s+pro\s+defunc|officium\s+defunctorum/i, tiempo: 'Difuntos' },
+  { pattern: /tempus\s+per\s+annum|tempore\s+per\s+annum|post\s+pentecosten|dominica\s+\d+\s+post/i, tiempo: 'Tiempo Ordinario' },
+];
+
+function tiempoFromTags(tags) {
+  for (const { pattern, tiempo } of TAG_TIEMPO_RULES) {
+    if (tags.some(t => pattern.test(t))) return tiempo;
+  }
+  return null;
+}
+
 // ─── Column indices (from gregobase_structure.sql) ─────────────────────────
 // gregobase_chants: id, cantusid, version, incipit, initial, office-part,
 //                  mode, mode_var, transcriber, commentary, headers, gabc,
@@ -247,12 +272,14 @@ async function main() {
     const source = sourceByChant.get(id);
     const tags   = tagsByChant.get(id) || [];
 
+    const tiempoFromTag = tiempoFromTags(tags);
+
     cantos.push({
       id,
       gregobase_id: id,
       titulo:    incipit,
       idioma:    'Latín',
-      tiempo:    OFFICE_TIEMPO[officePart]  || 'Canto Gregoriano',
+      tiempo:    tiempoFromTag || OFFICE_TIEMPO[officePart] || 'Canto Gregoriano',
       categoria: OFFICE_LABEL[officePart]   || officePart || 'Canto',
       modo:      MODE_LABEL[mode]           || (mode ? `Modo ${mode}` : '—'),
       fuente:    source?.title              || transcriber || '—',

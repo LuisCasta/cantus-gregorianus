@@ -47,10 +47,11 @@ const PAGE_SIZE = 24;
 export default function CantosSection({ cantos, onSelectCanto, activeTiempo, setActiveTiempo, gregoLoading }) {
   const [search, setSearch] = useState('');
   const [sortBy, setSortBy] = useState('tiempo');
+  const [activeIdioma, setActiveIdioma] = useState('all');
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   // Reset pagination when filters change
-  useEffect(() => { setVisibleCount(PAGE_SIZE); }, [search, activeTiempo, sortBy]);
+  useEffect(() => { setVisibleCount(PAGE_SIZE); }, [search, activeTiempo, sortBy, activeIdioma]);
 
   const tiempos = useMemo(() => getUniqueTiempos(cantos), [cantos]);
 
@@ -58,6 +59,7 @@ export default function CantosSection({ cantos, onSelectCanto, activeTiempo, set
     const q = search.trim().toLowerCase();
     let list = cantos.filter(c => {
       const matchTiempo = activeTiempo === 'all' || c.tiempo === activeTiempo;
+      const matchIdioma = activeIdioma === 'all' || c.idioma === activeIdioma;
       const matchSearch = !q ||
         c.titulo.toLowerCase().includes(q) ||
         (c.subtitulo && c.subtitulo.toLowerCase().includes(q)) ||
@@ -65,7 +67,7 @@ export default function CantosSection({ cantos, onSelectCanto, activeTiempo, set
         c.tiempo.toLowerCase().includes(q) ||
         c.categoria.toLowerCase().includes(q) ||
         (c.tags && c.tags.some(t => t.toLowerCase().includes(q)));
-      return matchTiempo && matchSearch;
+      return matchTiempo && matchIdioma && matchSearch;
     });
 
     list = [...list].sort((a, b) => {
@@ -77,7 +79,7 @@ export default function CantosSection({ cantos, onSelectCanto, activeTiempo, set
       return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
     });
     return list;
-  }, [cantos, search, sortBy, activeTiempo]);
+  }, [cantos, search, sortBy, activeTiempo, activeIdioma]);
 
   return (
     <section className="section" id="cantos">
@@ -102,6 +104,22 @@ export default function CantosSection({ cantos, onSelectCanto, activeTiempo, set
               onChange={e => setSearch(e.target.value)}
             />
           </div>
+        </div>
+
+        <div className="idioma-filters">
+          {[
+            { key: 'all', label: 'Todos los idiomas' },
+            { key: 'Latín', label: 'Latín' },
+            { key: 'Español', label: 'Español' },
+          ].map(({ key, label }) => (
+            <button
+              key={key}
+              className={`idioma-btn${activeIdioma === key ? ' active' : ''}`}
+              onClick={() => setActiveIdioma(key)}
+            >
+              {label}
+            </button>
+          ))}
         </div>
 
         <div className="tiempo-filters">
@@ -158,7 +176,7 @@ export default function CantosSection({ cantos, onSelectCanto, activeTiempo, set
           <>
             <div className="cards-grid">
               {filtered.slice(0, visibleCount).map(c => (
-                <CantoCard key={c.id} canto={c} onClick={onSelectCanto} />
+                <CantoCard key={c.gregobase_id ? `g${c.gregobase_id}` : `m${c.id}`} canto={c} onClick={onSelectCanto} />
               ))}
             </div>
             {visibleCount < filtered.length && (

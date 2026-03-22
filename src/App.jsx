@@ -43,6 +43,30 @@ export default function App() {
     });
   }, []);
 
+  // Sync selectedCanto with ?canto= URL param
+  useEffect(() => {
+    if (!cantos.length) return;
+    const id = new URLSearchParams(window.location.search).get('canto');
+    if (id) {
+      const found = cantos.find(c => String(c.id) === id || String(c.gregobase_id) === id);
+      if (found) setSelectedCanto(found);
+    }
+  }, [cantos]);
+
+  const openCanto = useCallback((canto) => {
+    setSelectedCanto(canto);
+    const url = new URL(window.location);
+    url.searchParams.set('canto', canto.gregobase_id ?? canto.id);
+    window.history.pushState({}, '', url);
+  }, []);
+
+  const closeCanto = useCallback(() => {
+    setSelectedCanto(null);
+    const url = new URL(window.location);
+    url.searchParams.delete('canto');
+    window.history.pushState({}, '', url);
+  }, []);
+
   const handleFilterTiempo = useCallback((tiempo) => {
     setActiveTiempo(tiempo);
     document.getElementById('cantos')?.scrollIntoView({ behavior: 'smooth' });
@@ -55,7 +79,7 @@ export default function App() {
       <StatsBar cantos={cantos} devociones={devociones} />
       <CantosSection
         cantos={cantos}
-        onSelectCanto={setSelectedCanto}
+        onSelectCanto={openCanto}
         activeTiempo={activeTiempo}
         setActiveTiempo={setActiveTiempo}
         gregoLoading={gregoLoading}
@@ -66,7 +90,7 @@ export default function App() {
       <Footer />
 
       {selectedCanto && (
-        <CantoModal canto={selectedCanto} onClose={() => setSelectedCanto(null)} />
+        <CantoModal canto={selectedCanto} onClose={closeCanto} />
       )}
       {selectedDev && (
         <DevModal dev={selectedDev} onClose={() => setSelectedDev(null)} />

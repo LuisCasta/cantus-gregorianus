@@ -9,7 +9,7 @@ export default function AcercaSection() {
         <div className="acerca-grid">
           <div className="acerca-text">
             <p><strong>AMDG</strong> — <em>Ad Maiorem Dei Gloriam</em> — es el lema de la Compañía de Jesús y el principio que inspira este portal: todo para la mayor gloria de Dios.</p>
-            <p>Este portal recoge exclusivamente el repertorio de <strong>canto gregoriano</strong> y música sacra de la tradición litúrgica romana anterior al Concilio Vaticano II (1962-1965), principalmente del <em>Graduale Romanum</em>, el <em>Liber Usualis</em> y el <em>Antiphonale Romanum</em>.</p>
+            <p>Este portal recoge el repertorio de <strong>canto gregoriano</strong> y música sacra de la tradición litúrgica romana, principalmente del <em>Graduale Romanum</em>, el <em>Liber Usualis</em> y el <em>Antiphonale Romanum</em>.</p>
             <p>El canto gregoriano, declarado por la Iglesia como «el canto propio de la liturgia romana» (Sacrosanctum Concilium, 116), se caracteriza por su monofonía, su texto latino y su íntima unión con la oración litúrgica.</p>
             <p>Las <strong>partituras</strong> incluidas se presentan en notación musical moderna (adaptación del Graduale) para facilitar su estudio y práctica.</p>
           </div>
